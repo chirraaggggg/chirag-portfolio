@@ -4,6 +4,8 @@ import "./globals.css"
 import { Navbar } from "../components/navbar"
 import { ThemeProvider } from "../components/theme-provider"
 import { ThemeChangeEffects } from "../components/theme-change-effects"
+import { ParallaxBackground } from "../components/parallax-background"
+import { SmoothScrollProvider } from "../components/smooth-scroll-provider"
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
@@ -50,13 +52,16 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${geistMono.variable} antialiased min-h-screen font-mono bg-background text-foreground transition-colors duration-300`}>
         <ThemeProvider>
-          <ThemeChangeEffects />
-          <div id="page-wrapper" className="min-h-screen bg-background text-foreground">
-            <Navbar />
-            <main className="max-w-4xl mx-auto px-4 py-8 pt-28">
-              {children}
-            </main>
-          </div>
+          <SmoothScrollProvider>
+            <ThemeChangeEffects />
+            <ParallaxBackground />
+            <div id="page-wrapper" className="min-h-screen bg-background text-foreground relative">
+              <Navbar />
+              <main className="max-w-4xl mx-auto px-4 py-8 pt-28">
+                {children}
+              </main>
+            </div>
+          </SmoothScrollProvider>
         </ThemeProvider>
       </body>
     </html>

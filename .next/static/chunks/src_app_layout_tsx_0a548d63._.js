@@ -5,8 +5,8 @@
   "static/chunks/node_modules_next_2c140338._.js",
   "static/chunks/node_modules_motion-dom_dist_es_3f659a55._.js",
   "static/chunks/node_modules_framer-motion_dist_es_621640ab._.js",
-  "static/chunks/node_modules_d2e0ff2b._.js",
-  "static/chunks/src_components_afb4cd2a._.js"
+  "static/chunks/node_modules_8bd408f1._.js",
+  "static/chunks/src_components_b50c9d67._.js"
 ],
     source: "dynamic"
 });
